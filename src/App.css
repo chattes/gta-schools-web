@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -34,5 +34,115 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.accordion-button {
+  background-color: #3e4451 !important;
+  color: antiquewhite !important;
+}
+
+.accordion-body {
+  background-color: #071b2e !important;
+}
+.accordion-button.collapsed {
+  background: white;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.hero-image {
+  position: relative;
+  background-image: url("./Assets/images/bg-school-1.jpeg");
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.typewriter {
+  font-family: Courier, monospace;
+  display: inline-block;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 1px;
+  animation: typing 5s steps(30, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+}
+
+.twaddr {
+  color: grey;
+}
+
+.twaddr:hover {
+  color: white;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(151, 210, 214);
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  margin-top: auto;
+  font-size: 12px;
+  background-color: #3e4451;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .hero-image {
+    height: 200px;
+  }
+  .typewriter-text {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+  .hero-image {
+    height: 200px;
+  }
+  .typewriter-text {
+    font-size: 12px;
+    font-weight: 400;
   }
 }
